@@ -1,13 +1,17 @@
 package com.tts.leasingapp.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Community {
 	
 	@Id
+	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long id;
+	
 	private String community;
 	private float rentForAPet;//rent_for_a_pet
 	private String address;
