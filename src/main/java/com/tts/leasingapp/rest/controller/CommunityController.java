@@ -52,5 +52,12 @@ public class CommunityController {
 		List<Community> communities = communityService.filter(petsAllowed);
 		return communities;
 	}
+	
+	//TODO
+	
+	//1. Get me all the communities where playground is available
+	//2. Get Apartment detail for the given ID
+	//3. Delete an apartment with the given id
+	//4. Get me 3 bedroom apartments
 
 }
