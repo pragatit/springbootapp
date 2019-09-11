@@ -16,16 +16,14 @@ public class CommunityController {
 	private ICommunityService communityService;
 
 	@GetMapping("/home")
-	public String home(Model model) {
-		model.addAttribute("com", new Community());
+	public String home(Community community) {
 		return "/community/save_community_details";
 	}
 	
 	@PostMapping("/community")
 	public String saveDetails(Community community, Model model) {
 		Community saveCommunity = communityService.saveCommunity(community);
-		model.addAttribute("name", saveCommunity.getName());
-		model.addAttribute("address", saveCommunity.getAddress());
+		model.addAttribute("community", saveCommunity);
 		return "/community/community_details";
 	}
 	
