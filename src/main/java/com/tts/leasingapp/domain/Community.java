@@ -12,7 +12,7 @@ public class Community {
 	@GeneratedValue(strategy= GenerationType.AUTO)
 	private Long id;
 	
-	private String community;
+	private String name;
 	private float rentForAPet;//rent_for_a_pet
 	private String address;
 	private boolean petsAllowed;
@@ -26,12 +26,12 @@ public class Community {
 		this.id = id;
 	}
 
-	public String getCommunity() {
-		return community;
+	public String getName() {
+		return name;
 	}
 
-	public void setCommunity(String community) {
-		this.community = community;
+	public void setName(String community) {
+		this.name = community;
 	}
 
 	public float getRentForAPet() {
@@ -64,6 +64,12 @@ public class Community {
 
 	public void setHasPlayGround(boolean hasPlayGround) {
 		this.hasPlayGround = hasPlayGround;
+	}
+
+	@Override
+	public String toString() {
+		return "Community [id=" + id + ", community=" + name + ", rentForAPet=" + rentForAPet + ", address="
+				+ address + ", petsAllowed=" + petsAllowed + ", hasPlayGround=" + hasPlayGround + "]";
 	}
 
 }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Save Community Details</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="#" th:action="@{/community}" th:object="${com}" method="post">
+		Name : 
+		<input type="text" th:field="*{name}"/>
+		Rent for a pet :
+		<input type="number" th:field="*{rentForAPet}"/>
+		Address :
+		<input type="text" th:field="*{address}"/>
+		Pets Allowed :
+		<input type="checkbox" th:field="*{petsAllowed}"/> 
+		Play Ground : 
+		<input type="checkbox" th:field="*{hasPlayGround}"/>
+		Submit : <button type="submit">Submit</button>
+	</form> 
+</body>
+</html>
